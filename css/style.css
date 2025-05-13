@@ -1,0 +1,61 @@
+/* Basic styles for the Space Battle game page */
+
+body {
+    margin: 0;
+    background-color: #000000; /* Black background for space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide scrollbars */
+}
+
+/* Styles for the game canvas (Phaser will create this element) */
+canvas {
+    border: 1px solid #333; /* Optional: a subtle border for the game area */
+}
+
+/* Styles for Name Input Fields */
+.name-input-container {
+    position: absolute;
+    left: 50px; /* Position from the left edge of the game container */
+    z-index: 10; /* Ensure it's above the Phaser canvas */
+    background-color: rgba(50, 50, 50, 0.85);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+    color: #ffffff;
+    font-family: sans-serif; /* Consider matching game font if available */
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* display: none; Initially hidden, controlled by JS */
+}
+
+#team1-name-container {
+    top: 320px; /* Adjust based on final ConfigScene layout */
+}
+
+#team2-name-container {
+    top: 385px; /* Adjust based on final ConfigScene layout */
+}
+
+.name-input-container label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.name-input-container input[type="text"] {
+    background-color: #222222;
+    color: #eeeeee;
+    border: 1px solid #bbbbbb;
+    padding: 8px;
+    font-size: 18px;
+    width: 200px; /* Adjust width as needed */
+    border-radius: 3px;
+}
+
+.name-input-container input[type="text"]:focus {
+    outline: none;
+    border-color: #ffff00; /* Highlight when focused */
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+}

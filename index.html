@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Space Battle</title>
+    <style>
+        body { margin: 0; background-color: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        /* The canvas element will be added by Phaser, we can style it if needed */
+    </style>
+</head>
+<body>
+    <div id="game-container" style="position: relative; display: flex; justify-content: center; align-items: center;">
+        <!-- Phaser canvas will be added here by js/main.js -->
+        <div id="team1-name-container" class="name-input-container" style="display: none;">
+            <label for="team1-name-input">Team 1 Name:</label>
+            <input type="text" id="team1-name-input" maxlength="10" autocomplete="off">
+        </div>
+        <div id="team2-name-container" class="name-input-container" style="display: none;">
+            <label for="team2-name-input">Team 2 Name:</label>
+            <input type="text" id="team2-name-input" maxlength="10" autocomplete="off">
+        </div>
+    </div>
+
+    <!-- Phaser 3.88.2 from CDN -->
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.88.2/dist/phaser.js"></script>
+    <!-- Our main game script, loaded as a module -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
